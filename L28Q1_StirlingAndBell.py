@@ -20,25 +20,18 @@
 # do it.
 
 # 1. Dave, Sarah, Peter, Andy
-
 # so S(4,1) = 1
-
 # or into four groups, there is just one way to do it as well
-
 # 1. Dave        Sarah          Peter         Andy
-
 # so S(4,4) = 1
-
 # If we try to split into more groups than we have people, there are no
 # ways to do it.
 
 # The formula for calculating the Stirling numbers is
-
 #  S(n, k) = k*S(n-1, k) + S(n-1, k-1)
 
 # Furthermore, the Bell number B(n) is the number of ways of splitting n
 # into any number of parts, that is,
-
 # B(n) is the sum of S(n,k) for k =1,2, ... , n.
 
 # Write two procedures, stirling and bell. The first procedure, stirling
@@ -90,10 +83,6 @@ def bell(n):
             seed[-1].append(1)
     return sum(seed[-1])
 
-
-
-
-
 #print stirling(1,1)
 #>>> 1
 #print stirling(2,1)
@@ -139,7 +128,7 @@ def bell(n):
 #print stirling(6,5)
 #>>> 15
 
-print stirlingRecursive(20,15)
+#print stirlingRecursive(20,15)
 #>>> 452329200
 #print stirling(20,15)
 #>>> 452329200

@@ -84,7 +84,7 @@ def triangleUdacity(n):
 #print triangle(3)
 #>>> [[1], [1, 1], [1, 2, 1]]
 
-print triangle(4)
+#print triangle(4)
 #>>>[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 
 #print triangle(5)
