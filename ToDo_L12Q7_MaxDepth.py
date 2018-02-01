@@ -8,7 +8,6 @@
 # Yes, we really mean it!  This is really tough (but doable) unless
 # you have some previous experience before this course.
 
-
 # Modify the crawl_web procedure to take a second parameter,
 # max_depth, that limits the depth of the search.  We can
 # define the depth of a page as the number of links that must

@@ -1,13 +1,22 @@
-#Feeling Lucky
+# Triple Gold Star
 
-#In Unit 6, we implemented a page ranking algorithm, but didn't finish the final
-#step of using it to improve our search results. For this question, you will use
-#the page rankings to produce the best output for a given query.
+# Only A Little Lucky
 
-#Define a procedure, lucky_search, that takes as input an index, a ranks
-#dictionary (the result of compute_ranks), and a keyword, and returns the one
-#URL most likely to be the best site for that keyword. If the keyword does not
-#appear in the index, lucky_search should return None.
+# The Feeling Lucky question (from the regular homework) assumed it was enough
+# to find the best-ranked page for a given query. For most queries, though, we
+# don't just want the best page (according to the page ranking algorithm), we
+# want a list of many pages that match the query, ordered from the most likely
+# to be useful to the least likely.
+
+# Your goal for this question is to define a procedure, ordered_search(index,
+# ranks, keyword), that takes the same inputs as lucky_search from Question 5,
+# but returns an ordered list of all the URLs that match the query.
+
+# To order the pages, use the quicksort algorithm, invented by Sir Tony Hoare in
+# 1959. Quicksort provides a way to sort any list of data, using an expected
+# number of comparisons that scales as n log n where n is the number of elements
+# in the list.
+
 
 cache = {
    'http://udacity.com/cs101x/urank/index.html': """<html>
@@ -212,36 +221,58 @@ def compute_ranks(graph):
         ranks = newranks
     return ranks
 
-def lucky_search(index, ranks, keyword):
+
+# The idea of quicksort is quite simple:
+
+# If the list has zero or one elements, it is already sorted.
+
+# Otherwise, pick a pivot element, and split the list into two partitions: one
+# contains all the elements equal to or lower than the value of the pivot
+# element, and the other contains all the elements that are greater than the
+# pivot element. Recursively sort each of the sub-lists, and then return the
+# result of concatenating the sorted left sub-list, the pivot element, and the
+# sorted right sub-list.
+
+# For simplicity, use the first element in the list as your pivot element (this
+# is not usually a good choice, since it means if the input list is already
+# nearly sorted, the actual work will be much worse than expected).
+
+def ordered_search(index, ranks, keyword):
     if keyword not in index:
         return None
     else:
+        rankings =[]
         for i in ranked_ranks: #searches the ordered list, most popular downwards
             if i in index[keyword]:
-                return i
+                rankings.append(i)
 
-def lucky_search_udacity(index, ranks, keyword):
-    pages = lookup(index,keyword)
-    if not pages:
-        return None
-    best_page = pages[0]
-    for i in pages:
-        if ranks[i] > ranks[best_page]:
-            best_page = i
-    return best_page
+    return rankings
 
-#Here's an example of how your procedure should work on the test site:
+# Here are some example showing what ordered_search should do:
+
+# Observe that the result list is sorted so the highest-ranking site is at the
+# beginning of the list.
+
+# Note: the intent of this question is for students to write their own sorting
+# code, not to use the built-in sort procedure.
 
 index, graph = crawl_web('http://udacity.com/cs101x/urank/index.html')
 ranks = compute_ranks(graph)
-#sorting the rankings, starting from highest
+#list of rankings based on popularity
 ranked_ranks = sorted(ranks, key=ranks.get, reverse=True)
 
-print lucky_search(index, ranks, 'Hummus')
-#>>> http://udacity.com/cs101x/urank/kathleen.html
+print ordered_search(index, ranks, 'Hummus')
+#>>> ['http://udacity.com/cs101x/urank/kathleen.html',
+#    'http://udacity.com/cs101x/urank/nickel.html',
+#    'http://udacity.com/cs101x/urank/arsenic.html',
+#    'http://udacity.com/cs101x/urank/hummus.html',
+#    'http://udacity.com/cs101x/urank/index.html']
 
-print lucky_search(index, ranks, 'the')
-#>>> http://udacity.com/cs101x/urank/nickel.html
+print ordered_search(index, ranks, 'the')
+#>>> ['http://udacity.com/cs101x/urank/nickel.html',
+#    'http://udacity.com/cs101x/urank/arsenic.html',
+#    'http://udacity.com/cs101x/urank/hummus.html',
+#    'http://udacity.com/cs101x/urank/index.html']
 
-print lucky_search(index, ranks, 'babaganoush')
+print ordered_search(index, ranks, 'babaganoush')
 #>>> None

@@ -31,9 +31,6 @@ def fibonacciUdacity(n):
         current, after = after, after + current
     return current
 
-
-
-
 #quiz: how many times is fibonacci(30) counted recursively in evaluating fibonacci_recursive(36)?
 #print fibonacci(36-30+1) #working backwards on counter list starting from counter[1]
 #>>> 13
