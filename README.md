@@ -4,10 +4,11 @@ CS101: Intro to Computer Science
 I completed this introductory computer programming course taught in Python, by [Prof. David Evans](http://www.cs.virginia.edu/~evans/) on [Udacity](https://www.udacity.com/course/cs101). Several key search engine components (including a crawler, an index and a page rank algorithm) are built through the course. Other topics include procedural programming (methods, parameters, return, values), basic control structures (sequence, if/else, for loop, while loop), data structures (dictionaries, hashing, lists, strings), and recursion.
 
 This includes the theory quizzes, problem sets and optional problem sets.
+File prefixes: L(x)Q(x): Lesson(x)Quiz(x)
 
 ##### Selected problems:
 
-[Gaming Social Network](https://github.com/buchananwp/Udacity_CS101/blob/master/L30Q2_FinalProject_GamersNetwork.py)
+[Gaming Social Network (Final Project)](https://github.com/buchananwp/Udacity_CS101/blob/master/L30Q2_FinalProject_GamersNetwork.py)
 
 [Only A Little Lucky (Search Engine)](https://github.com/buchananwp/Udacity_CS101/blob/master/L24Q3_OnlyALittleLucky.py)
 
