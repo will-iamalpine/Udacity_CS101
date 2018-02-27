@@ -6,26 +6,25 @@
 # division instead of integer division. You get decimal division if any of
 # the numbers involved are decimals.
 
+def list_meanAlternate(p):
+    if p == []:
+        return 'empty set'
+    else:
+        return float(sum(p))/len(p)
+
 def list_mean(p):
-
-# alternate solution
-#    if p == []:
-#        return 'empty set'
-#    else:
-#        return float(sum(p))/len(p)
-
 	sum = 0.
 	for e in p:
 		sum += e
 	return sum / len(p)
 
-print list_mean([1,2,3,4])
+print list_meanAlternate([1,2,3,4])
 #>>> 2.5
-print list_mean([1,3,4,5,2])
+print list_meanAlternate([1,3,4,5,2])
 #>>> 3.0
-print list_mean([])
+print list_meanAlternate([])
 #>>> ??? You decide. If you decide it should give an error, comment
 # out the print line above to prevent your code from being graded as
 # incorrect.
-print list_mean([2])
+print list_meanAlternate([2])
 #>>> 2.0

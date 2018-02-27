@@ -7,29 +7,23 @@
 
 from L20Q2_ShiftNLetters import shift_n_letters
 
-
 def rotate(phrase,n):
     phraseout=""
     for i in phrase:
-
         if ord(i) == 32:
             phraseout += " "
         else:
             phraseout += shift_n_letters(i,n)
-
     return phraseout
 
 print rotate ('sarah', 13)
 #>>> 'fnenu'
 print rotate('fnenu',13)
 #>>> 'sarah'
-
 print rotate('dave',5)
 #>>>'ifaj'
-
 print rotate('ifaj',-5)
 #>>>'dave'
-
 print rotate(("zw pfli tfuv nfibj tfiivtkcp pfl jyflcu "
                 "sv rscv kf ivru kyzj"),-17)
 #>>> ???

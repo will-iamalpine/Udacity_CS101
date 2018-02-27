@@ -4,7 +4,6 @@
 # boolean True if the list is symmetric and False if it is not.
 
 def symmetric(matrix):
-    #print len(matrix)
     if len(matrix) != len(matrix[0]):
         return False
     i = 0
@@ -16,8 +15,6 @@ def symmetric(matrix):
             j += 1
         i += 1
     return True
-
-
 
 print symmetric([[1, 2, 3],
                 [2, 3, 4],

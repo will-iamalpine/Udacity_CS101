@@ -40,7 +40,7 @@
 # items will be split. The second procedure, bell, takes as input a
 # positive integer n and returns the Bell number B(n).
 
-#construting a stirling triangle list
+#constructing a stirling triangle list
 def stirling(n,k):
     seed = [[1],[1,1],[1,3,1],[1,7,6,1]]
     if k > n:
@@ -55,7 +55,7 @@ def stirling(n,k):
                 #print seed[-2][j],'seed[-2][j]' #add this at end per formula
                 seed[-1].append((j+2)*seed[-2][j+1]+seed[-2][j])
             seed[-1].append(1) #endrow
-    return seed[n-1][k-1] #pulls from list
+    return seed[n-1][k-1] 
 
 #Udacity's solution using recursion
 def stirlingRecursive(n,k):

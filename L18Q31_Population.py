@@ -17,6 +17,6 @@ population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0}
 population['Mumbai'] = 12.5
 population['Mumbai'] = 10.
 
-print population
+#print population
 #printing output of index
-print population['Shanghai']
+#print population['Shanghai']

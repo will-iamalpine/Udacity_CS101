@@ -69,18 +69,18 @@ def courses_offered(courses, hexamester):
 # However, do not leave any uncommented statements in your code which lead
 # to an error as your code will be graded as incorrect.
 
-def is_offered(courses, course, hexamester):
 #my initial answer
-#    if hexamester in courses:
-#        if course in courses[hexamester]:
-#            return True
-#        else:
-#            return False
-#    return 'hexamester not found'
+def is_offered(courses, course, hexamester):
+    if hexamester in courses:
+        if course in courses[hexamester]:
+            return True
+        else:
+            return False
+    return 'hexamester not found'
 
 #provided solution
+def is_offeredUdacity(courses, course, hexamester):
     return course in courses[hexamester]
-
 
 print is_offered(courses, 'cs101', 'apr2012')
 #>>> True

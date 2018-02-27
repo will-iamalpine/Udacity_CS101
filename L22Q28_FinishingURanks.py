@@ -19,8 +19,6 @@ def compute_ranks(graph):
         ranks = newranks
     return ranks
 
-
-
 cache = {
    'http://udacity.com/cs101x/urank/index.html': """<html>
 <body>
@@ -60,10 +58,6 @@ For great hummus, try
 </html>
 
 
-
-
-
-
 """,
    'http://udacity.com/cs101x/urank/nickel.html': """<html>
 <body>
@@ -76,10 +70,6 @@ best Hummus recipe!
 
 </body>
 </html>
-
-
-
-
 
 
 """,
@@ -97,7 +87,6 @@ Kathleen's Hummus Recipe
 <li> Squeeze in one lemon.
 <li> Add salt, pepper, and buttercream frosting to taste.
 </ol>
-
 </body>
 </html>
 
@@ -108,15 +97,12 @@ Kathleen's Hummus Recipe
 The Arsenic Chef's World Famous Hummus Recipe
 </h1>
 <p>
-
 <ol>
 <li> Kidnap the <a href="http://udacity.com/cs101x/urank/nickel.html">Nickel Chef</a>.
 <li> Force her to make hummus for you.
 </ol>
-
 </body>
 </html>
-
 """,
    'http://udacity.com/cs101x/urank/hummus.html': """<html>
 <body>
@@ -124,18 +110,12 @@ The Arsenic Chef's World Famous Hummus Recipe
 Hummus Recipe
 </h1>
 <p>
-
 <ol>
 <li> Go to the store and buy a container of hummus.
 <li> Open it.
 </ol>
-
 </body>
 </html>
-
-
-
-
 """,
 }
 

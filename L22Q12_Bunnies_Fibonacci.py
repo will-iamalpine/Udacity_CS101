@@ -15,7 +15,7 @@ def fibonacci(n):
         counter.append(counter[-1]+counter[-2])
     return counter#[n]
 
-#udacity recursive solution
+#recursive solution
 def fibonacci_recursive(n):
     if n == 0:
         return 0

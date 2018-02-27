@@ -30,6 +30,12 @@
 # Stars! #
 
 def fix_machine(debris, product):
+    for i in product:
+        if i not in debris:
+            return "Give me something that's not useless next time."
+    return product
+
+def fix_machineAlternate(debris, product):
     i = 0
     response = product
     while i < len(product):
@@ -39,7 +45,6 @@ def fix_machine(debris, product):
         else:
             i += 1
     return response
-
 
 ### TEST CASES ###
 print ("Test case 1: ", fix_machine('UdaciousUdacitee', 'Udacity')) #== "Give me something that's not useless next time."

@@ -71,15 +71,3 @@ print table_dict['Python']
 
 print hash_value(table_dict,'Python')
 print table_dict.get('Python') #better way to do this
-
-
-
-#examples from L18Q31:
-#population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0}
-#adding to population
-#population['Mumbai'] = 12.5
-#overwriting key data
-#population['Mumbai'] = 10.
-#print population
-#printing output of index
-#print population['Shanghai']

@@ -34,7 +34,6 @@ def ancestors(genealogy, person):
             if i in ada_family:
                 print 'found',i
                 ancestors(ada_family,i)
-
     return family
 
 
@@ -45,7 +44,6 @@ def ancestorsUdacity(genealogy, person):
         for parent in parents:
             result = result + ancestorsUdacity(genealogy,parent)
         return result
-
     return []
 # Here are some examples:
 

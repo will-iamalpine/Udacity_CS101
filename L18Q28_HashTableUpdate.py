@@ -17,7 +17,6 @@ def hashtable_update(htable,key,value):
                 entry[1] = value
     else:
         hashtable_add(htable,key,value)
-
     return htable
 
 def hashtable_lookup(htable,key):
@@ -57,7 +56,7 @@ hashtable_update(table, 'Rochelle', 94)
 hashtable_update(table, 'Zed', 68)
 hashtable_update(table, 'Bill', 45)
 
-print hashtable_lookup(table,'Bill')
+#print hashtable_lookup(table,'Bill')
 #print table
 #>>> [[['Ellis', 11], ['Francis', 13]], [['Zed', 68]], [['Bill', 42],
 #>>> ['Zoe', 14]], [['Coach', 4]], [['Louis', 29], ['Nick', 2],

@@ -9,11 +9,6 @@
 # needed to make up the total.
 #
 
-"""def f(x):
-  y0 = x + 1
-  y1 = x * 3
-  y2 = y0 ** y3
-  return (y0,y1,y2)"""
 # (No fair for USians to just say use a "Forever" stamp and be done with it!)
 #
 

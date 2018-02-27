@@ -12,19 +12,17 @@ def shift_n_letters(letter, n):
         total = 122-(96-total)
     return chr(total)
 
-'''
-print shift_n_letters('s', 13)
+#print shift_n_letters('s', 13)
 #>>> f
-print shift_n_letters('a', -2)
+#print shift_n_letters('a', -2)
 #>>> y
-print shift_n_letters('a', -1)
+#print shift_n_letters('a', -1)
 #>>> z
-print shift_n_letters('s', 1)
+#print shift_n_letters('s', 1)
 #>>> t
-print shift_n_letters('s', 2)
+#print shift_n_letters('s', 2)
 #>>> u
-print shift_n_letters('s', 10)
+#print shift_n_letters('s', 10)
 #>>> c
-print shift_n_letters('s', -10)
+#print shift_n_letters('s', -10)
 #>>> i
-'''

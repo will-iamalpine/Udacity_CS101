@@ -15,20 +15,15 @@ page = '''<div id="top_bin"> <div id="top_content" class="width960">
 def get_next_target(page):
     start_link = page.find('<a href=')
     if start_link != -1:
-    #Insert your code below here
         start_quote = page.find('"', start_link)
         end_quote = page.find('"', start_quote + 1)
         url = page[start_quote + 1:end_quote]
         return url, end_quote
-
     else:
         return (None, 0)
 
-print(get_next_target(page))
-
-#provided solution
-'''
-def get_next_target(page):
+#Udacity solution
+def get_next_targetUdacity(page):
     start_link = page.find('<a href=')
 
     # if the link tag sequence is not found, find returns a -1
@@ -39,4 +34,6 @@ def get_next_target(page):
     start_quote = page.find('"', start_link)
     end_quote = page.find('"', start_quote + 1)
     url = page[start_quote + 1:end_quote]
-    return url, end_quote'''
+    return url, end_quote
+
+print(get_next_target(page))
